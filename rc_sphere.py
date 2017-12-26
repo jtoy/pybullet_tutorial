@@ -1,4 +1,4 @@
-#show how create and control a sphere on the xy plane
+#show how to create and control a sphere on the xy plane
 import pybullet as p
 import time
 import random
