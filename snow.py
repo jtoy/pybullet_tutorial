@@ -7,8 +7,8 @@ objects = {}
 def create_snow():
   for i in range(50):
     objects[i] = p.createCollisionShape(p.GEOM_SPHERE)
-    p.changeVisualShape(objects[i],-1,rgbaColor=[random.random(),random.random(),0,1])
     p.createMultiBody(random.randint(1,10),objects[i],-1,basePosition=[random.randint(-10,10),random.randint(-10,10),random.randint(2,5)])
+    p.changeVisualShape(objects[i],-1,rgbaColor=[random.random(),random.random(),random.random(),1]) #changeVisualShape must come after createMultiBody
 for i in range(1000000000):
   p.stepSimulation()
   if i % 100000 == 0: 
